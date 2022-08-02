@@ -1,8 +1,10 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.ListIterator;
 import java.util.Scanner;
 
 public class FirstProject {//class
@@ -14,6 +16,15 @@ public class FirstProject {//class
 		names.push("Caleb");
 		names.push("Sue");
 		names.push("Sally");
-		System.out.println(names.pop());
+		
+		ListIterator<String> it = names.listIterator();
+		it.next();
+		it.next();
+		names.add("Susan");
+		for (String s: names)
+		{
+			System.out.println(s);
+		}
+		
 	}
 }
