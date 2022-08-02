@@ -1,18 +1,23 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class FirstProject {//class
 
-	public static void main(String[] args) { 
-		//method. Identifier for this method is main. Void (nothing) is the return tyoe.
-		//public means it is available everywhere
-		//static means we don't have to create an object to evoke this class
-		System.out.println("Hello World");	
-		//Scanner in = new Scanner(System.in);
-		//String s = in.nextLine();
-		char t = 't';
-		System.out.println(t);
-		//ßtring t = new String("hey"); //evoke the constructor
+	public static void main(String[] args) throws FileNotFoundException { 
+		Scanner in = new Scanner(new File("students.txt"));
+		List<String> students = new ArrayList<String>();
+		while(in.hasNextLine())
+		{
+			students.add(in.nextLine());
+		}
+		for (int i = 0; i < students.size(); i++)
+		{
+			System.out.println("name: " + students.get(i));
+		}
+		in.close();
+
 	}
-//class -> instantiation -> object1
-	//	-> instantiation -> object2
 }
