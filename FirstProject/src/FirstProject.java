@@ -1,30 +1,22 @@
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.ListIterator;
-import java.util.Scanner;
+
 
 public class FirstProject {//class
 
 
 	public static void main(String[] args) { 
-
-		LinkedList<String> names = new LinkedList<String>();
-		names.push("Caleb");
-		names.push("Sue");
-		names.push("Sally");
+		int[][] data = {
+				{4, 6, 1, 2},
+				{2, 3, 4, 6},
+				{1, 2, 3, 4}
+		};
 		
-		ListIterator<String> it = names.listIterator();
-		it.next();
-		it.next();
-		names.add("Susan");
-		for (String s: names)
+		for (int i = 0; i < data.length; i++)
 		{
-			System.out.println(s);
+			for (int j = 0; j < data[i].length; j++)
+			{
+				System.out.println(data[i][j]);
+			}
+			System.out.println();
 		}
-		
 	}
 }
